@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Option 2: Northeast Tomato Architecture Adapted for Mass Media Marketing</title>
+  <link rel="icon" type="image/png" href="assets/branding/badge_25_years_transparent.png" />
+
+  <!-- Exact Northeast Tomato Typography: YRT School No 9 + ABC Ginto Plus Variable -->
+  <style>
+    @font-face {
+      font-family: 'YRT School No 9';
+      src: url('assets/YRTSchoolNo9.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'ABC Ginto Plus';
+      src: url('assets/ABCGintoPlusVariable-Trial.ttf') format('truetype');
+      font-weight: 100 1000;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    html, body {
+      overflow-x: hidden !important;
+      max-width: 100vw;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0c4ca3',
+              dark: '#051744',
+              slate: '#0f172a'
+            }
+          },
+          fontFamily: {
+            display: ['"YRT School No 9"', 'Arial', 'sans-serif'],
+            sans: ['"ABC Ginto Plus"', 'Arial', 'sans-serif'],
+            strip: ['"ABC Ginto Plus"', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Exact Northeast Tomato Headline Scaling and Tight Leading */
+    .tomato-headline {
+      font-family: 'YRT School No 9', Arial, sans-serif;
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+
+    /* Vertical Rolling Text Hover (Slot Machine Transition) */
+    .nav-roll {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      vertical-align: middle;
+    }
+    .nav-roll .roll-inner {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-roll:hover .roll-inner {
+      transform: translateY(-50%);
+    }
+    .nav-roll .roll-item {
+      height: 1.6rem;
+      line-height: 1.6rem;
+      display: block;
+      white-space: nowrap;
+    }
+
+    /* Marquee Infinite Loop */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .marquee-text-item {
+      font-family: 'YRT School No 9', Arial, sans-serif;
+      font-size: clamp(4.5rem, 8vw, 7.5rem);
+      line-height: 0.85;
+      letter-spacing: -0.025em;
+    }
+
+    /* Client Logo Marquee Left to Right (Top Strip) */
+    @keyframes marqueeLTR {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+    .animate-marquee-ltr {
+      display: flex;
+      width: max-content;
+      animation: marqueeLTR 35s linear infinite;
+    }
+    .animate-marquee-ltr:hover {
+      animation-play-state: paused;
+    }
+
+    /* Client Logo Marquee Right to Left (Bottom Strip) */
+    @keyframes marqueeRTL {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee-rtl {
+      display: flex;
+      width: max-content;
+      animation: marqueeRTL 35s linear infinite;
+    }
+    .animate-marquee-rtl:hover {
+      animation-play-state: paused;
+    }
+
+    /* Butter-Smooth FAQ Accordion Animation */
+    .faq-item {
+      transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .faq-answer-wrap {
+      overflow: hidden;
+      transition: max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.32s ease;
+    }
+
+    /* Hardware Accelerated Smooth Marquee */
+    .animate-marquee, .animate-marquee-ltr, .animate-marquee-rtl {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" />
+  <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+</head>
+<body class="bg-[#faf7f2] text-slate-900 antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
+
+  <!-- ============================================================== -->
+  <!-- 0. INTRO SPLASH / PRELOADER SCREEN (3.5s HOLD BEFORE ENTRY)    -->
+  <!-- ============================================================== -->
+  <div id="splashScreen" class="fixed inset-0 z-[9999] bg-[#0c4ca3] flex items-center justify-center transition-all duration-700 ease-out select-none">
+    <div id="splashContent" class="flex items-center justify-center px-6 transform transition-all duration-700 scale-95 opacity-0">
+      
+      <!-- AAAC Main White Emblem Logo -->
+      <img src="assets/branding/aaac_logo_white.png" 
+           alt="AA Advertising & Communications" 
+           class="h-14 sm:h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-md pointer-events-none" />
+      
+      <!-- Crisp Vertical Divider Bar (" | ") -->
+      <div class="w-[2px] h-12 sm:h-16 md:h-20 lg:h-24 bg-white/40 mx-4 sm:mx-8 md:mx-10 rounded-full flex-shrink-0"></div>
+      
+      <!-- 25 Years Celebrating Expertise Badge -->
+      <img src="assets/branding/badge_25_years_transparent.png" 
+           alt="25 Years of Expertise" 
+           class="h-14 sm:h-20 md:h-24 lg:h-28 w-auto object-contain drop-shadow-md pointer-events-none" />
+      
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 1. NORTHEAST TOMATO STYLE NAVBAR (PERFECT CENTER ALIGNMENT)   -->
+  <!-- ============================================================== -->
+  <header class="w-full pt-8 sm:pt-10 pb-4 relative z-30">
+    <div class="w-full max-w-5xl mx-auto px-6 grid grid-cols-3 items-center">
+      
+      <!-- Left Navigation Links (Aligned to right, toward center logo) -->
+      <nav class="flex items-center justify-end gap-8 sm:gap-12 font-sans font-bold text-sm sm:text-base tracking-[0.16em] uppercase text-stone-800 pr-6 sm:pr-8">
+        <a href="#capabilities" class="nav-roll">
+          <span class="roll-inner">
+            <span class="roll-item text-stone-800">Home</span>
+            <span class="roll-item text-brand-blue">Home</span>
+          </span>
+        </a>
+        <a href="#clients" class="nav-roll">
+          <span class="roll-inner">
+            <span class="roll-item text-stone-800">About</span>
+            <span class="roll-item text-brand-blue">About</span>
+          </span>
+        </a>
+      </nav>
+
+      <!-- Center Logo (Dead Center of Viewport, Scaled to h-12 sm:h-16 md:h-[4.5rem]) -->
+      <div class="flex items-center justify-center">
+        <a href="#top" class="group flex flex-col items-center">
+          <img src="assets/aaac_logo_clean_tight.png" 
+               alt="AA Advertising & Communications" 
+               class="h-12 sm:h-16 md:h-[4.25rem] w-auto object-contain transition-transform group-hover:scale-105" />
+        </a>
+      </div>
+
+      <!-- Right Navigation Links (Aligned to left, toward center logo) -->
+      <nav class="flex items-center justify-start gap-8 sm:gap-12 font-sans font-bold text-sm sm:text-base tracking-[0.16em] uppercase text-stone-800 pl-6 sm:pr-8">
+        <a href="#network" class="nav-roll">
+          <span class="roll-inner">
+            <span class="roll-item text-stone-800">Products</span>
+            <span class="roll-item text-brand-blue">Products</span>
+          </span>
+        </a>
+        <a href="#contact" class="nav-roll">
+          <span class="roll-inner">
+            <span class="roll-item text-stone-800">Contact</span>
+            <span class="roll-item text-brand-blue font-extrabold">Contact</span>
+          </span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- 2. EXPERIMENTAL GEN-Z POP-ART HERO COMPOSITION -->
+  <!-- ============================================================== -->
+  <section id="heroSection" style="height: min(85vh, 860px); min-height: 600px;" class="relative flex flex-col items-center justify-center px-4 sm:px-8 pt-6 pb-12 sm:pb-16 text-center overflow-hidden">
+
+    <!-- Interactive Tactile Half-Bleed Flanking Stickers (Tomato Style Object Anchors) -->
+
+    <!-- Left Flanking: Red Vintage Typewriter (Tilted 14deg, Half Outside Viewport Bottom-Left) -->
+    <div id="floatTypewriter" class="absolute -left-16 sm:-left-20 md:-left-24 lg:-left-28 bottom-[-6%] sm:bottom-[-4%] md:bottom-[-2%] w-[64vw] sm:w-[50vw] md:w-[38vw] lg:w-[32vw] max-w-[520px] z-20 pointer-events-none transition-transform duration-700 ease-out will-change-transform">
+      <img src="assets/red_typewriter_final.png" 
+           alt="Vintage Red Mechanical Typewriter Tilted and Bleeding Left" 
+           class="w-full h-auto object-contain transform rotate-[14deg] drop-shadow-[0_40px_60px_rgba(220,38,38,0.24)] select-none" />
+    </div>
+
+    <!-- Right Flanking: Studio Broadcast Mic (Lifted Higher, Tilted -12deg, Half Outside Viewport) -->
+    <div id="floatMic" class="absolute -right-10 sm:-right-14 md:-right-18 lg:-right-20 bottom-[6%] sm:bottom-[8%] md:bottom-[10%] w-[54vw] sm:w-[42vw] md:w-[32vw] lg:w-[26vw] max-w-[430px] z-20 pointer-events-none transition-transform duration-700 ease-out will-change-transform">
+      <img src="assets/boom_mic_clean.png" 
+           alt="Shure Studio Broadcast Mic Lifted Higher Bleeding Right" 
+           class="w-full h-auto object-contain transform rotate-[-12deg] drop-shadow-[0_30px_50px_rgba(0,0,0,0.26)] select-none" />
+    </div>
+
+    <!-- Main Hero Text Container (Hyper-Bold Poster Typography, Dead Center) -->
+    <div class="max-w-5xl mx-auto space-y-8 sm:space-y-10 relative z-30 my-auto">
+      
+      <!-- Massive Bolder Headline with YRT School No 9 -->
+      <h1 class="tomato-headline text-6xl sm:text-8xl md:text-9xl lg:text-[8.5rem] xl:text-[9.5rem] text-[#1b3427] leading-[0.84] tracking-[-0.035em]">
+        Your <span class="text-brand-blue">Media</span><br class="hidden sm:inline" /> Buying Partner
+      </h1>
+
+      <!-- High-Impact Bold Narrative Subtitle -->
+      <p class="font-sans text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.16em] uppercase text-stone-900 font-black max-w-2xl mx-auto leading-relaxed">
+        SINCE 2002: SOUTH INDIA'S LEADING MASS MEDIA PLANNING, PRINT DAILIES, TELEVISION AIRTIME, HIGH-IMPACT OOH, AND BRAND ARCHITECTURE.
+      </p>
+
+      <!-- Pill Action CTA Button -->
+      <div class="pt-3">
+        <a href="#contact" class="inline-flex items-center justify-center px-12 py-5 rounded-full bg-brand-blue hover:bg-[#093a7d] text-white font-sans font-black text-sm sm:text-base tracking-widest uppercase transition-all shadow-xl hover:scale-105">
+          Get In Touch
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- NORTHEAST TOMATO STYLE BROAD TILTED RUNNING MARQUEE STRIP      -->
+  <!-- ============================================================== -->
+  <div class="w-full overflow-hidden">
+    <div class="relative w-full overflow-hidden py-6 sm:py-10 bg-brand-blue -rotate-[1.8deg] scale-[1.05] shadow-2xl z-20 my-8 sm:my-14 border-y-2 border-white/20">
+      <div class="animate-marquee flex items-center gap-12 whitespace-nowrap text-white font-bold select-none">
+        
+        <!-- Loop Segment 1 -->
+        <div class="flex items-center gap-12">
+          <span class="marquee-text-item">PRINT DAILIES</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item text-white/80">TELEVISION AIRTIME</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item">HIGH IMPACT OOH</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item text-white/80">BTL ACTIVATIONS</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item">BRAND ARCHITECTURE</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item text-white/80">RADIO BROADCAST</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+        </div>
+
+        <!-- Loop Segment 2 (Duplicate for Seamless Infinite Loop) -->
+        <div class="flex items-center gap-12">
+          <span class="marquee-text-item">PRINT DAILIES</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item text-white/80">TELEVISION AIRTIME</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item">HIGH IMPACT OOH</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item text-white/80">BTL ACTIVATIONS</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item">BRAND ARCHITECTURE</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+          <span class="marquee-text-item text-white/80">RADIO BROADCAST</span>
+          <span class="text-white/40 text-4xl font-black">/</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 3. NORTHEAST TOMATO STYLE ABOUT US SECTION (AUTHENTIC REPLICA)  -->
+  <!-- ============================================================== -->
+  <section id="about" class="relative w-full py-28 sm:py-36 px-6 sm:px-12 bg-[#faf7f2] overflow-hidden border-b border-stone-200/60 z-20 min-h-[720px] flex items-center justify-center">
+    
+    <!-- Left Flank: Rounded Editorial Photo with Overlapping Pill Sticker -->
+    <div class="hidden lg:block absolute left-[-4vw] xl:left-[-1vw] top-1/2 -translate-y-1/2 w-[24vw] max-w-[25rem] z-10 pointer-events-none">
+      <div class="relative">
+        <div class="w-full aspect-[4.4/5.2] rounded-2xl overflow-hidden shadow-2xl border border-stone-300/80 pointer-events-auto">
+          <img src="assets/newspaper_press.jpg" alt="National Newspaper Production Rolls" class="w-full h-full object-cover object-center" />
+        </div>
+        <!-- Authentic User Sticker Badge Tilted -10deg Overlapping Bottom Right -->
+        <div class="absolute -bottom-5 -right-8 transform -rotate-[10deg] shadow-xl hover:scale-105 transition-transform pointer-events-auto">
+          <img src="assets/user_sticker_badge.png" alt="About AAAC • Est. 2002" class="h-12 sm:h-14 w-auto drop-shadow-md" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Flank: 3 Staggered Authentic Editorial Photos Peeking In -->
+    <div class="hidden lg:flex flex-col items-end absolute right-[-4vw] xl:right-[-1vw] top-1/2 -translate-y-1/2 w-[22vw] max-w-[23rem] z-10 pointer-events-none">
+      <!-- 01 Photo (slight negative tilt) -->
+      <div class="w-[19vw] max-w-[20rem] aspect-[3.8/4.5] rounded-2xl overflow-hidden shadow-xl border border-stone-300/80 -rotate-[2deg] -mr-4 pointer-events-auto">
+        <img src="assets/press_0.jpg" alt="National Newspaper Press Cylinders" class="w-full h-full object-cover object-center" />
+      </div>
+      <!-- 02 Photo (positive tilt, overlapping lower) -->
+      <div class="w-[18vw] max-w-[19rem] aspect-[3.4/4] rounded-2xl overflow-hidden shadow-2xl border border-stone-300/80 rotate-[14deg] -mt-16 -mr-8 pointer-events-auto">
+        <img src="assets/press_1.jpg" alt="Mass Broadcast Print Runs" class="w-full h-full object-cover object-center" />
+      </div>
+      <!-- 03 Photo (accent tilt) -->
+      <div class="w-[17vw] max-w-[18rem] aspect-[3.4/4] rounded-2xl overflow-hidden shadow-xl border border-stone-300/80 rotate-[26deg] -mt-14 -mr-12 pointer-events-auto">
+        <img src="assets/newspaper_macro.jpg" alt="Morning Broadsheet Fleet" class="w-full h-full object-cover object-center" />
+      </div>
+    </div>
+
+    <!-- Center Typography Lockup (Exact Northeast Tomato Structure & Hierarchy) -->
+    <div class="relative z-10 max-w-2xl mx-auto text-center flex flex-col items-center justify-center space-y-7 pointer-events-auto">
+      
+      <!-- Big Display Headline (YRT School No 9) with exact color contrast -->
+      <h2 class="tomato-headline text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] text-[#1b3427] leading-[0.92] tracking-[-0.035em]">
+        <span class="text-brand-blue block">South India roots.</span>
+        Pan-India media buying.
+      </h2>
+
+      <!-- Condensed uppercase paragraph (Exact Northeast Tomato signature) -->
+      <p class="font-sans text-xs sm:text-sm md:text-base font-bold tracking-[0.18em] uppercase text-stone-700 leading-relaxed max-w-xl mx-auto">
+        WE SOURCE EXCLUSIVELY FROM INDIA'S PREMIER BROADCAST HUBS AND PRINT DAILIES. DELIVERING UNPRECEDENTED VOLUME PRICING, PRIVILEGED PLACEMENT, AND MEASURABLE BRAND CONVICTION ACROSS EVERY STATE.
+      </p>
+
+      <!-- Key Metric Strip -->
+      <div class="pt-4 flex items-center justify-center gap-6 sm:gap-10 text-[#1b3427]">
+        <div class="text-center">
+          <span class="tomato-headline text-3xl sm:text-4xl text-brand-blue block">24+</span>
+          <span class="font-sans text-[11px] font-extrabold uppercase tracking-widest text-stone-500">Years Active</span>
+        </div>
+        <div class="w-px h-8 bg-stone-300/80"></div>
+        <div class="text-center">
+          <span class="tomato-headline text-3xl sm:text-4xl text-brand-blue block">INS</span>
+          <span class="font-sans text-[11px] font-extrabold uppercase tracking-widest text-stone-500">Accredited</span>
+        </div>
+        <div class="w-px h-8 bg-stone-300/80"></div>
+        <div class="text-center">
+          <span class="tomato-headline text-3xl sm:text-4xl text-brand-blue block">100%</span>
+          <span class="font-sans text-[11px] font-extrabold uppercase tracking-widest text-stone-500">Direct Buying</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- 4. CARDLESS EDITORIAL SERVICES SECTION (NO GENERIC CARDS)       -->
+  <!-- ============================================================== -->
+  <section id="services" class="relative w-full py-24 sm:py-36 px-6 sm:px-12 bg-[#faf7f2] overflow-hidden z-20 border-b border-stone-200/60">
+    <div class="max-w-6xl mx-auto space-y-16 sm:space-y-24">
+
+      <!-- Section Header Lockup (Exact "Our full line" Typography) -->
+      <div class="space-y-4 max-w-3xl">
+        <div class="flex items-center gap-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-blue"></span>
+          <span class="font-sans text-xs font-black tracking-[0.25em] uppercase text-stone-500">
+            Core Capabilities
+          </span>
+        </div>
+        <h2 class="tomato-headline text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem] text-[#1b3427] leading-[0.88] tracking-[-0.035em]">
+          Our services
+        </h2>
+        <p class="font-sans text-xs sm:text-sm tracking-[0.2em] uppercase text-stone-600 font-bold leading-relaxed">
+          ORCHESTRATED ACROSS MASS PRINT, BROADCAST TELEVISION, AND DIGITAL COMMERCE.
+        </p>
+      </div>
+
+      <!-- Editorial Full-Width Row System (Zero Boxes, Zero Cards) -->
+      <div class="divide-y divide-[#1b3427]/20 border-t border-b border-[#1b3427]/20">
+        
+        <!-- SERVICE 01: ADVERTISING & MEDIA STRATEGY -->
+        <div class="group py-12 sm:py-16 transition-colors duration-300 hover:bg-[#f3ede2]/70 px-4 sm:px-8 -mx-4 sm:-mx-8 rounded-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Index + Big Display Title + Deliverable Tags -->
+            <div class="lg:col-span-6 space-y-4">
+              <span class="font-sans text-xs font-black tracking-[0.25em] text-brand-blue uppercase block">
+                01 / MASS MEDIA ARSENAL
+              </span>
+              <h3 class="tomato-headline text-4xl sm:text-5xl md:text-6xl text-[#1b3427] group-hover:text-brand-blue transition-colors leading-[0.94]">
+                Advertising &amp;<br />Media Strategy
+              </h3>
+              
+              <!-- Deliverable Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  National Print Dailies
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Regional TV Broadcast
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  OOH Highway Hoardings
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Volume Media Buying
+                </span>
+              </div>
+            </div>
+
+            <!-- Right: Exact User Copy + Physical Media Thumbnail + Arrow -->
+            <div class="lg:col-span-6 flex flex-col justify-between h-full space-y-6 pt-2">
+              <p class="font-sans text-base sm:text-lg lg:text-xl text-stone-800 leading-relaxed font-medium">
+                Our national and international presence enables us to get the best advertising platforms, as well as the best media pricing.
+              </p>
+              
+              <div class="flex items-center justify-between pt-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-stone-300 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="assets/newspaper_macro.jpg" alt="National Print Media" class="w-full h-full object-cover" />
+                  </div>
+                  <div class="font-sans text-xs uppercase tracking-widest text-stone-500 font-bold">
+                    <span>INS ACCREDITED</span><br />
+                    <span class="text-brand-blue font-extrabold">TIER 1 PLATFORMS</span>
+                  </div>
+                </div>
+
+                <!-- Interactive Directional Arrow -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-stone-400/80 flex items-center justify-center text-stone-800 group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all group-hover:translate-x-1 shadow-sm">
+                  <span class="text-xl sm:text-2xl font-bold">→</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SERVICE 02: EVENTS -->
+        <div class="group py-12 sm:py-16 transition-colors duration-300 hover:bg-[#f3ede2]/70 px-4 sm:px-8 -mx-4 sm:-mx-8 rounded-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Index + Big Display Title + Deliverable Tags -->
+            <div class="lg:col-span-6 space-y-4">
+              <span class="font-sans text-xs font-black tracking-[0.25em] text-brand-blue uppercase block">
+                02 / EXPERIENTIAL CURATION
+              </span>
+              <h3 class="tomato-headline text-4xl sm:text-5xl md:text-6xl text-[#1b3427] group-hover:text-brand-blue transition-colors leading-[0.94]">
+                Events &amp;<br />Activations
+              </h3>
+              
+              <!-- Deliverable Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  BTL Brand Activations
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Corporate Summits
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Product Launches
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Trade Expos &amp; Galas
+                </span>
+              </div>
+            </div>
+
+            <!-- Right: Exact User Copy + Physical Media Thumbnail + Arrow -->
+            <div class="lg:col-span-6 flex flex-col justify-between h-full space-y-6 pt-2">
+              <p class="font-sans text-base sm:text-lg lg:text-xl text-stone-800 leading-relaxed font-medium">
+                Our team helps you curate the right events for your brand and customer base.
+              </p>
+              
+              <div class="flex items-center justify-between pt-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-stone-300 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="assets/press_0.jpg" alt="Curated Brand Events" class="w-full h-full object-cover" />
+                  </div>
+                  <div class="font-sans text-xs uppercase tracking-widest text-stone-500 font-bold">
+                    <span>CURATED EXPERIENCES</span><br />
+                    <span class="text-brand-blue font-extrabold">LIVE IMMERSIONS</span>
+                  </div>
+                </div>
+
+                <!-- Interactive Directional Arrow -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-stone-400/80 flex items-center justify-center text-stone-800 group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all group-hover:translate-x-1 shadow-sm">
+                  <span class="text-xl sm:text-2xl font-bold">→</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SERVICE 03: DIGITAL MARKETING -->
+        <div class="group py-12 sm:py-16 transition-colors duration-300 hover:bg-[#f3ede2]/70 px-4 sm:px-8 -mx-4 sm:-mx-8 rounded-2xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Index + Big Display Title + Deliverable Tags -->
+            <div class="lg:col-span-6 space-y-4">
+              <span class="font-sans text-xs font-black tracking-[0.25em] text-brand-blue uppercase block">
+                03 / FULL-FUNNEL COMMERCE
+              </span>
+              <h3 class="tomato-headline text-4xl sm:text-5xl md:text-6xl text-[#1b3427] group-hover:text-brand-blue transition-colors leading-[0.94]">
+                Digital<br />Marketing
+              </h3>
+              
+              <!-- Deliverable Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Full-Funnel Growth
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Performance Advertising
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Conversion Optimization
+                </span>
+                <span class="px-3.5 py-1 rounded-full bg-[#f0ebe1] border border-stone-300/80 text-[11px] font-sans font-bold uppercase tracking-wider text-stone-700">
+                  Omnichannel Media
+                </span>
+              </div>
+            </div>
+
+            <!-- Right: Exact User Copy + Physical Media Thumbnail + Arrow -->
+            <div class="lg:col-span-6 flex flex-col justify-between h-full space-y-6 pt-2">
+              <p class="font-sans text-base sm:text-lg lg:text-xl text-stone-800 leading-relaxed font-medium">
+                To grow digitally and sell more products, we offer full-funnel digital marketing services.
+              </p>
+              
+              <div class="flex items-center justify-between pt-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-stone-300 shadow-md group-hover:scale-105 transition-transform">
+                    <img src="assets/press_1.jpg" alt="Performance Digital Scaling" class="w-full h-full object-cover" />
+                  </div>
+                  <div class="font-sans text-xs uppercase tracking-widest text-stone-500 font-bold">
+                    <span>DATA &amp; CONVERSIONS</span><br />
+                    <span class="text-brand-blue font-extrabold">MEASURABLE SCALE</span>
+                  </div>
+                </div>
+
+                <!-- Interactive Directional Arrow -->
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-stone-400/80 flex items-center justify-center text-stone-800 group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue transition-all group-hover:translate-x-1 shadow-sm">
+                  <span class="text-xl sm:text-2xl font-bold">→</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- 5. INVERTED FAQ SECTION (ABOVE CLIENTS)                          -->
+  <!-- ============================================================== -->
+  <section id="faq" class="relative w-full py-24 sm:py-36 px-6 sm:px-12 bg-[#0c4ca3] text-white overflow-hidden z-20 border-b border-blue-900/40">
+    <div class="max-w-4xl mx-auto space-y-12">
+      
+      <!-- Eyebrow Title (Exact Northeast Tomato Style) -->
+      <div class="text-center">
+        <span class="font-sans text-xs sm:text-sm font-extrabold tracking-[0.22em] uppercase text-blue-200/90">
+          QUESTIONS, ANSWERED
+        </span>
+      </div>
+
+      <!-- Accordion Stack -->
+      <div class="space-y-4 sm:space-y-6" id="faqAccordion">
+        
+        <!-- FAQ Item 1 (Closed) -->
+        <div class="faq-item cursor-pointer rounded-[2rem] sm:rounded-[2.5rem] bg-[#093877] hover:bg-[#073068] py-8 sm:py-10 px-8 sm:px-12 select-none border border-white/10 transition-colors duration-200" data-open="false">
+          <div class="faq-header text-center">
+            <h3 class="faq-question tomato-headline text-3xl sm:text-4xl md:text-5xl text-white leading-[0.96] transition-colors duration-300">
+              What does AA Advertising manufacture?
+            </h3>
+          </div>
+          <div class="faq-answer-wrap" style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease-out;">
+              <div class="pt-6 text-center">
+                <p class="font-sans font-bold text-xs sm:text-sm tracking-[0.16em] uppercase text-stone-700 leading-relaxed max-w-2xl mx-auto">
+                  WE ENGINEER NATIONWIDE MEDIA STRATEGY, PREMIER NEWSPAPER BROADSHEET CAMPAIGNS, REGIONAL HIGH-VOLTAGE TELEVISION BROADCASTS, MONUMENTAL HIGHWAY OOH BILLBOARDS, AND FULL-FUNNEL PERFORMANCE DIGITAL ARCHITECTURE.
+                </p>
+              </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 (Closed) -->
+        <div class="faq-item cursor-pointer rounded-[2rem] sm:rounded-[2.5rem] bg-[#093877] hover:bg-[#073068] py-8 sm:py-10 px-8 sm:px-12 select-none border border-white/10 transition-colors duration-200" data-open="false">
+          <div class="faq-header text-center">
+            <h3 class="faq-question tomato-headline text-3xl sm:text-4xl md:text-5xl text-white leading-[0.96] transition-colors duration-300">
+              What is your production capacity?
+            </h3>
+          </div>
+          <div class="faq-answer-wrap" style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease-out;">
+              <div class="pt-6 text-center">
+                <p class="font-sans font-bold text-xs sm:text-sm tracking-[0.16em] uppercase text-stone-700 leading-relaxed max-w-2xl mx-auto">
+                  AS AN INS ACCREDITED POWERHOUSE FOR OVER TWO DECADES, WE DEPLOY SIMULTANEOUS NATIONWIDE CAMPAIGNS ACROSS 50+ DAILIES, 30+ BROADCAST NETWORKS, 100+ TRANSIT SITES, AND MILLIONS OF DAILY DIGITAL IMPRESSIONS ACROSS EVERY INDIAN STATE.
+                </p>
+              </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 (Open / Highlighted by Default - Matches Reference Photo Exactly) -->
+        <div class="faq-item faq-open cursor-pointer rounded-[2rem] sm:rounded-[2.5rem] bg-white shadow-2xl py-8 sm:py-10 px-8 sm:px-12 select-none transition-colors duration-200">
+          <div class="faq-header text-center">
+            <h3 class="faq-question tomato-headline text-3xl sm:text-4xl md:text-5xl text-brand-blue leading-[0.96] transition-colors duration-300">
+              How long has AAAC been in operation?
+            </h3>
+          </div>
+          <div class="faq-answer-wrap" style="max-height: 300px; opacity: 1; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease-out;">
+              <div class="pt-6 text-center">
+                <p class="font-sans font-bold text-xs sm:text-sm tracking-[0.16em] uppercase text-stone-700 leading-relaxed max-w-2xl mx-auto">
+                  AA ADVERTISING &amp; COMMUNICATIONS HAS BEEN A LEADING MASS MEDIA AGENCY IN SOUTH INDIA SINCE 2002. IN THAT TIME WE'VE GROWN FROM A REGIONAL BUYING OPERATION INTO A PAN-INDIA FULL-SCALE CAMPAIGN, BTL ACTIVATION, AND PERFORMANCE ADVERTISING HUB SERVING 500+ BRANDS ACROSS THE NATION AND BEYOND.
+                </p>
+              </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 (Closed) -->
+        <div class="faq-item cursor-pointer rounded-[2rem] sm:rounded-[2.5rem] bg-[#093877] hover:bg-[#073068] py-8 sm:py-10 px-8 sm:px-12 select-none border border-white/10 transition-colors duration-200" data-open="false">
+          <div class="faq-header text-center">
+            <h3 class="faq-question tomato-headline text-3xl sm:text-4xl md:text-5xl text-white leading-[0.96] transition-colors duration-300">
+              How do you secure best media pricing?
+            </h3>
+          </div>
+          <div class="faq-answer-wrap" style="max-height: 0px; opacity: 0; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease-out;">
+              <div class="pt-6 text-center">
+                <p class="font-sans font-bold text-xs sm:text-sm tracking-[0.16em] uppercase text-stone-700 leading-relaxed max-w-2xl mx-auto">
+                  THROUGH 24+ YEARS OF DIRECT VOLUME COMMITMENTS AND FORMAL ACCREDITATION, WE BYPASS BROKERS AND SECURE WHOLESALE RATES DIRECTLY WITH CHIEF PUBLISHERS AND SATELLITE BROADCAST CONGLOMERATES, PASSING DIRECT VOLUME SAVINGS TO OUR CLIENTS.
+                </p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================== -->
+  <!-- 6. CLIENT LOGO MARQUEE STRIPS (DUAL DIRECTIONAL RUNNERS)       -->
+  <!-- ============================================================== -->
+  <section id="clients" class="relative w-full py-20 sm:py-28 bg-[#faf7f2] overflow-hidden z-20 border-b border-stone-200/60">
+    <div class="space-y-12 sm:space-y-16">
+      
+      <!-- Section Header -->
+      <div class="text-center space-y-3 px-6 max-w-3xl mx-auto">
+        <span class="font-sans text-xs font-black tracking-[0.25em] uppercase text-stone-500 block">
+          Client Trust &amp; Partnerships
+        </span>
+        <h2 class="tomato-headline text-5xl sm:text-6xl md:text-7xl text-[#1b3427] leading-[0.92] tracking-[-0.035em]">
+          Brands we power
+        </h2>
+        <p class="font-sans text-xs sm:text-sm tracking-[0.18em] uppercase text-stone-600 font-bold max-w-xl mx-auto leading-relaxed">
+          ORCHESTRATING MASS MEDIA STRATEGY FOR INDIA'S MOST REPUTED ENTERPRISES.
+        </p>
+      </div>
+
+      <!-- Dual Marquee Strips Container -->
+      <div class="space-y-6 overflow-hidden w-full">
+        
+        <!-- Strip 1: Scrolls from LEFT to RIGHT (Top Strip) -->
+        <div class="w-full overflow-hidden py-2">
+          <div class="animate-marquee-ltr flex items-center gap-6 sm:gap-8 whitespace-nowrap select-none">
+            
+            <!-- Set 1 (6 Logos) -->
+            <div class="flex items-center gap-6 sm:gap-8 shrink-0">
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Bhima.png" alt="Bhima Jewellers" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/GCU.png" alt="Garden City University" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Alliance university logo.jpg" alt="Alliance University" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Confident group.jpg" alt="Confident Group" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Monier roofing logo.png" alt="Monier Roofing" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/DPDC.png" alt="DPDC" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+            </div>
+
+            <!-- Set 2 (Duplicate for Infinite Scroll) -->
+            <div class="flex items-center gap-6 sm:gap-8 shrink-0" aria-hidden="true">
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Bhima.png" alt="Bhima Jewellers" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/GCU.png" alt="Garden City University" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Alliance university logo.jpg" alt="Alliance University" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Confident group.jpg" alt="Confident Group" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Monier roofing logo.png" alt="Monier Roofing" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/DPDC.png" alt="DPDC" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Strip 2: Scrolls from RIGHT to LEFT (Bottom Strip) -->
+        <div class="w-full overflow-hidden py-2">
+          <div class="animate-marquee-rtl flex items-center gap-6 sm:gap-8 whitespace-nowrap select-none">
+            
+            <!-- Set 1 (6 Other Logos) -->
+            <div class="flex items-center gap-6 sm:gap-8 shrink-0">
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/IAS.png" alt="IAS" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/AWARE.png" alt="AWARE" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Anu-Solar.jpg" alt="Anu Solar" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Brillent printers logo.jpg" alt="Brilliant Printers" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/IFINE Interiors logo.jpg" alt="IFINE Interiors" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/isdc-logo1.png" alt="ISDC" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+            </div>
+
+            <!-- Set 2 (Duplicate for Infinite Scroll) -->
+            <div class="flex items-center gap-6 sm:gap-8 shrink-0" aria-hidden="true">
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/IAS.png" alt="IAS" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/AWARE.png" alt="AWARE" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Anu-Solar.jpg" alt="Anu Solar" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/Brillent printers logo.jpg" alt="Brilliant Printers" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/IFINE Interiors logo.jpg" alt="IFINE Interiors" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100 rounded" />
+              </div>
+              <div class="px-8 py-5 h-24 sm:h-28 min-w-[200px] sm:min-w-[240px] rounded-2xl bg-[#ede5d8]/70 border border-stone-300/60 flex items-center justify-center hover:bg-white hover:shadow-md transition-all">
+                <img src="assets/isdc-logo1.png" alt="ISDC" class="max-h-12 sm:max-h-14 max-w-[170px] object-contain filter grayscale hover:grayscale-0 transition-all opacity-85 hover:opacity-100" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ============================================================== -->
+  <!-- 3. NORTHEAST TOMATO STYLE PRE-FOOTER CARD & UTILITY STRIP      -->
+  <!-- ============================================================== -->
+  <footer id="contact" class="w-full pt-8 pb-12 px-4 sm:px-6 lg:px-8 bg-[#faf7f2] relative z-20 overflow-hidden">
+    <div class="w-full max-w-[1440px] mx-auto space-y-14">
+
+      <!-- Giant Curved Marketing Action Card (Northeast Tomato Style) -->
+      <div class="relative w-full mx-auto overflow-hidden rounded-[2.5rem] sm:rounded-[3.5rem] text-white px-6 sm:px-12 py-16 sm:py-24 text-center shadow-2xl flex flex-col items-center justify-center min-h-[540px] max-h-[680px] bg-[#0c4ca3]">
+        
+        <!-- Marketing Press Photography Texture Background -->
+        <img src="assets/newspaper_press.jpg" 
+             alt="National Newspaper Press Cylinders" 
+             class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none opacity-20" />
+        
+        <!-- Solid Tint Overlay for High Contrast Legibility -->
+        <div class="absolute inset-0 bg-[#0c4ca3]/85 pointer-events-none"></div>
+
+        <!-- Foreground Content -->
+        <div class="relative z-10 max-w-5xl mx-auto space-y-8 sm:space-y-10">
+          
+          <!-- Massive Organic Display Headline -->
+          <h2 class="tomato-headline text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] text-white">
+            Let's talk production
+          </h2>
+
+          <!-- Centered Subtitle with Wide Letterspacing -->
+          <p class="font-sans text-xs sm:text-sm tracking-[0.22em] uppercase text-white/95 font-bold max-w-2xl mx-auto leading-relaxed">
+            PAN-INDIA MEDIA BUYING, BTL EXPERIENTIAL INQUIRIES, OR GENERAL QUESTIONS.
+          </p>
+
+          <!-- Dual Pill Action Buttons -->
+          <div class="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <a href="mailto:info@aaa.net.in" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white hover:bg-stone-100 text-slate-900 hover:text-brand-blue font-sans font-extrabold text-xs tracking-widest uppercase transition-all shadow-xl hover:scale-105">
+              Talk To Sales
+            </a>
+            <a href="mailto:info@aaa.net.in" class="px-8 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white hover:bg-white hover:text-slate-900 text-white font-sans font-extrabold text-xs tracking-widest uppercase transition-all hover:scale-105">
+              Email Us
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Clean 3-Column Utility Footer Strip (Exact Tomato Signature) -->
+      <div class="px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-12 text-center md:text-left pt-4">
+        
+        <!-- Left: Address & Micro Brand Hook -->
+        <div class="space-y-1 font-strip text-sm sm:text-base font-bold text-slate-800 uppercase tracking-wider">
+          <p>#27 AA Towers, MSR Main Road</p>
+          <p>Mathikere, Bangalore 560 054</p>
+          <p class="text-brand-blue pt-1.5 text-xs font-black tracking-widest">
+            IDEAS &amp; BEYOND
+          </p>
+        </div>
+
+        <!-- Center: Iconic Arched Wordmark Emblem Lockup -->
+        <div class="flex flex-col items-center justify-center -space-y-2">
+          <svg viewBox="0 0 400 80" class="w-64 sm:w-72 h-auto overflow-visible">
+            <path id="archCurve" d="M 30,75 A 170,95 0 0,1 370,75" fill="none" />
+            <text font-family="'Bricolage Grotesque', sans-serif" font-size="13" font-weight="800" fill="#0c4ca3" letter-spacing="3.5">
+              <textPath href="#archCurve" startOffset="50%" text-anchor="middle">
+                AA ADVERTISING &amp; COMMUNICATIONS
+              </textPath>
+            </text>
+          </svg>
+          <img src="assets/branding/aaac_logo_blue.png" alt="AAAC" class="h-16 w-auto object-contain relative z-10 hover:scale-105 transition-transform" />
+          <p class="font-strip text-xs font-bold text-slate-400 tracking-widest uppercase pt-1.5">
+            ESTD. 2002 • 25 YEARS OF BRAND GENESIS
+          </p>
+        </div>
+
+        <!-- Right: Telephone, Email & Production Credit -->
+        <div class="space-y-1 font-strip text-sm sm:text-base font-bold text-slate-800 uppercase tracking-wider md:text-right">
+          <p><a href="tel:+919845388869" class="hover:text-brand-blue transition-colors">+91 98453 88869</a></p>
+          <p><a href="mailto:info@aaa.net.in" class="hover:text-brand-blue transition-colors">INFO@AAA.NET.IN</a></p>
+          <p class="text-brand-blue pt-1.5 text-xs font-black tracking-widest">
+            WEBSITE BY AAAC + BANGALORE
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    // Natural Push & Pull Scroll Transition (Following Each Object's Angle & Axis):
+    // Left Typewriter (+14deg): pulls down-left into the corner/offscreen on scroll down, pushes back out on scroll up
+    // Right Boom Mic (-12deg): pulls up-right along boom arm offscreen on scroll down, pushes back out on scroll up
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const tw = document.getElementById('floatTypewriter');
+      const mic = document.getElementById('floatMic');
+
+      const p = Math.min(Math.max(scrollY / 420, 0), 1);
+      const scale = 1 - (p * 0.1);
+      const opacity = Math.max(1 - (p * 1.15), 0);
+
+      // Left Typewriter pulls back along its diagonal (-X, +Y) hiding deep into bottom-left
+      if (tw) {
+        tw.style.transform = `translate(${-p * 180}px, ${p * 140}px) scale(${scale}) rotate(${14 - p * 8}deg)`;
+        tw.style.opacity = opacity;
+      }
+
+      // Right Mic pulls back along its boom arm (+X, +Y) hiding deep into bottom-right
+      if (mic) {
+        mic.style.transform = `translate(${p * 200}px, ${p * 120}px) scale(${scale}) rotate(${-12 + p * 6}deg)`;
+        mic.style.opacity = opacity;
+      }
+    }, { passive: true });
+  </script>
+
+  <script>
+    // Initial 3.5s Solid Blue Intro Splash Screen Lockup:
+    // Holds full screen solid blue with centered AAAC Logo | 25 Years Badge
+    window.addEventListener('DOMContentLoaded', () => {
+      const splash = document.getElementById('splashScreen');
+      const content = document.getElementById('splashContent');
+      if (splash && content) {
+        // Prevent background scrolling while intro is active
+        document.body.classList.add('overflow-hidden');
+
+        // Smooth pop-in entrance
+        setTimeout(() => {
+          content.classList.remove('scale-95', 'opacity-0');
+          content.classList.add('scale-100', 'opacity-100');
+        }, 80);
+
+        // Hold for 3.5 seconds before smooth fade-out reveal into website
+        setTimeout(() => {
+          splash.style.opacity = '0';
+          splash.style.pointerEvents = 'none';
+          document.body.classList.remove('overflow-hidden');
+
+          setTimeout(() => {
+            splash.style.display = 'none';
+          }, 750);
+        }, 3400);
+      }
+    });
+  </script>
+  <script>
+    // Butter-Smooth FAQ Accordion Animation (Inverted Brand Blue Colorway):
+    document.querySelectorAll('#faqAccordion .faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const isOpen = item.classList.contains('faq-open');
+        
+        // Collapse all items smoothly to inverted closed state
+        document.querySelectorAll('#faqAccordion .faq-item').forEach(other => {
+          other.classList.remove('faq-open', 'bg-white', 'shadow-2xl');
+          other.classList.add('bg-[#093877]', 'hover:bg-[#073068]', 'border', 'border-white/10');
+          const q = other.querySelector('.faq-question');
+          if (q) {
+            q.classList.remove('text-brand-blue');
+            q.classList.add('text-white');
+          }
+          const wrap = other.querySelector('.faq-answer-wrap');
+          if (wrap) {
+            wrap.style.maxHeight = '0px';
+            wrap.style.opacity = '0';
+          }
+        });
+
+        // If clicked item was closed, smoothly expand it to active white card
+        if (!isOpen) {
+          item.classList.add('faq-open', 'bg-white', 'shadow-2xl');
+          item.classList.remove('bg-[#093877]', 'hover:bg-[#073068]', 'border', 'border-white/10');
+          const q = item.querySelector('.faq-question');
+          if (q) {
+            q.classList.remove('text-white');
+            q.classList.add('text-brand-blue');
+          }
+          const wrap = item.querySelector('.faq-answer-wrap');
+          if (wrap) {
+            wrap.style.maxHeight = (wrap.scrollHeight + 24) + 'px';
+            wrap.style.opacity = '1';
+          }
+        }
+      });
+    });
+
+    // Northeast Tomato Signature: Buttery Smooth Inertia Scrolling
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.5,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  </script>
+</body>
+</html>

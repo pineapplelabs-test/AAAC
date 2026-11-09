@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+  --agency-navy: #051744;
+  --agency-midnight: #030d24;
+  --agency-blue: #0c4ca3;
+  --agency-blue-hover: #093b80;
+  --pure-white: #ffffff;
+  --off-white: #f8fafc;
+  --light-gray: #f1f5f9;
+  --slate-dark: #0f172a;
+  --slate-body: #334155;
+  --slate-muted: #64748b;
+  --border-subtle: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: var(--slate-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: var(--slate-dark);
+}
+
+.font-headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.font-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+/* Light Navigation Bar */
+.nav-bar-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.5rem;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-bar-light {
+    padding: 0 1.5rem;
+    height: 76px;
+  }
+}
+
+/* Slide-over Fullscreen Drawer */
+.mccann-drawer {
+  position: fixed;
+  inset: 0;
+  background-color: #051744;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem 5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-8px);
+}
+
+.mccann-drawer.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .mccann-drawer {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Light Hero Section */
+.hero-light {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8.5rem 3.5rem 5rem 3.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .hero-light {
+    padding: 7rem 1.5rem 4rem 1.5rem;
+  }
+}
+
+/* Case Study Cards (Clean White / Light) */
+.case-card-light {
+  position: relative;
+  overflow: hidden;
+  background-color: #0f172a;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(12, 76, 163, 0.2);
+}
+
+.case-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  opacity: 0.88;
+}
+
+.case-card-light:hover .case-card-img {
+  transform: scale(1.04);
+  opacity: 0.98;
+}
+
+.case-overlay-dark {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 23, 68, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .case-overlay-dark {
+    padding: 1.5rem;
+  }
+}
+
+/* Light Capability Cards */
+.capability-card-light {
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.capability-card-light:hover {
+  border-color: #0c4ca3;
+  box-shadow: 0 10px 25px -5px rgba(12, 76, 163, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Client Logo Marquee */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 32s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #0c4ca3;
+}

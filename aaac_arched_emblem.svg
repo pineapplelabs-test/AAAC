@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" class="w-72 h-auto">
+  <path id="archCurve" d="M 30,120 A 170,120 0 0,1 370,120" fill="none" />
+  <text font-family="'Bricolage Grotesque', sans-serif" font-size="14" font-weight="800" fill="#0c4ca3" letter-spacing="3.5">
+    <textPath href="#archCurve" startOffset="50%" text-anchor="middle">
+      AA ADVERTISING &amp; COMMUNICATIONS
+    </textPath>
+  </text>
+  <image href="assets/branding/aaac_logo_blue.png" x="130" y="45" width="140" height="75" preserveAspectRatio="xMidYMid meet" />
+  <text x="200" y="145" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="2" text-anchor="middle">
+    ESTD. 2002 • 25 YEARS OF BRAND GENESIS
+  </text>
+</svg>

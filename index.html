@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AA Advertising & Communications | 25 Years of Brand Genesis</title>
+  <meta name="description" content="AA Advertising & Communications Pvt. Ltd. (AAAC). 360 Advertising Agency celebrating 25 years. Mass media planning, brand genesis, BTL events, and full funnel digital marketing." />
+  
+  <link rel="icon" type="image/png" href="assets/branding/badge_25_years_transparent.png" />
+
+  <!-- Google Fonts: Montserrat (Heavy weights), Plus Jakarta Sans, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            agency: {
+              navy: '#051744',
+              midnight: '#030d24',
+              blue: '#0c4ca3',
+              blueHover: '#093b80',
+              border: '#e2e8f0'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            headline: ['"Montserrat"', 'sans-serif'],
+            script: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white text-slate-900 selection:bg-agency-blue selection:text-white">
+
+  <!-- TOP MINIMAL NAVIGATION BAR (CLEAN LIGHT DESIGN) -->
+  <header class="nav-bar-light">
+    <!-- Menu Button -->
+    <button id="open-drawer-btn" class="flex items-center gap-3 text-xs font-headline tracking-widest text-slate-900 hover:text-agency-blue transition focus:outline-none">
+      <span class="flex flex-col gap-1.5 w-6">
+        <span class="w-full h-[2px] bg-slate-900 rounded-full"></span>
+        <span class="w-2/3 h-[2px] bg-slate-900 rounded-full"></span>
+      </span>
+      <span>MENU</span>
+    </button>
+
+    <!-- Center Logo (Royal Blue on White) -->
+    <a href="#home" class="flex items-center">
+      <img src="assets/branding/aaac_logo_blue.png" alt="AA Advertising & Communications" class="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform hover:scale-105" />
+    </a>
+
+    <!-- Right Quick Link & 25-Year Badge -->
+    <div class="flex items-center gap-5 sm:gap-7">
+      <div class="hidden sm:flex items-center gap-2.5 text-xs font-headline tracking-widest text-slate-700">
+        <img src="assets/branding/badge_25_years_transparent.png" alt="25 Years" class="w-6 h-6 object-contain" />
+        <span>25 YEARS</span>
+      </div>
+      <a href="#contact" class="px-6 py-2.5 rounded-full bg-agency-blue hover:bg-agency-blueHover text-white text-xs font-headline tracking-widest uppercase transition-colors shadow-md">
+        Let's Talk
+      </a>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN SLIDE-OVER DRAWER -->
+  <div id="mccann-drawer" class="mccann-drawer">
+    <div class="flex items-center justify-between border-b border-white/10 pb-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/branding/badge_25_years_transparent.png" alt="25 Years" class="w-8 h-8 object-contain" />
+        <span class="font-headline text-xs tracking-widest text-slate-300">ESTABLISHED 2002 • BANGALORE</span>
+      </div>
+      <button id="close-drawer-btn" class="flex items-center gap-2 text-xs font-headline tracking-widest text-white hover:text-slate-300">
+        <span>CLOSE</span>
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Links -->
+    <nav class="my-auto py-6 space-y-4">
+      <div>
+        <a href="#works" class="drawer-link font-headline text-4xl sm:text-6xl font-bold hover:text-sky-300 transition-colors inline-block text-white">
+          01 / WORK
+        </a>
+      </div>
+      <div>
+        <a href="#about" class="drawer-link font-headline text-4xl sm:text-6xl font-bold hover:text-sky-300 transition-colors inline-block text-white">
+          02 / AGENCY TRUTH
+        </a>
+      </div>
+      <div>
+        <a href="#capabilities" class="drawer-link font-headline text-4xl sm:text-6xl font-bold hover:text-sky-300 transition-colors inline-block text-white">
+          03 / WHAT WE SELL
+        </a>
+      </div>
+      <div>
+        <a href="#clients" class="drawer-link font-headline text-4xl sm:text-6xl font-bold hover:text-sky-300 transition-colors inline-block text-white">
+          04 / CLIENT ROSTER
+        </a>
+      </div>
+      <div>
+        <a href="#contact" class="drawer-link font-headline text-4xl sm:text-6xl font-bold hover:text-sky-300 transition-colors inline-block text-white">
+          05 / START A BRIEF
+        </a>
+      </div>
+    </nav>
+
+    <!-- Drawer Footer Information -->
+    <div class="pt-6 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-400 font-sans">
+      <div>
+        <p class="font-headline font-bold text-white mb-1 uppercase tracking-wider">Headquarters</p>
+        <p>#27, AA Towers, MSR Main Road, Mathikere, Bangalore 560 054</p>
+      </div>
+      <div>
+        <p class="font-headline font-bold text-white mb-1 uppercase tracking-wider">Direct Inquiries</p>
+        <p>+91 98453 88869 | 080 23378382</p>
+        <p>info@aaa.net.in</p>
+      </div>
+      <div>
+        <p class="font-headline font-bold text-white mb-1 uppercase tracking-wider">25 Years of Craft</p>
+        <p>Pan India 360 Mass Media Advertising and Communications.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRIGHT CLEAN EDITORIAL HERO -->
+  <section id="home" class="hero-light">
+    <div class="max-w-7xl mx-auto w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Agency Slogan and Pitch -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Solid Dark Headline with Royal Blue Underline -->
+          <h1 class="font-headline text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.08] tracking-tight">
+            WHERE THE GENESIS <br />
+            OF IDEAS CREATES <br />
+            <span class="text-agency-blue underline decoration-slate-900 underline-offset-8">ENDURING BRANDS.</span>
+          </h1>
+
+          <!-- Body Copy -->
+          <p class="text-slate-600 text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+            In the advertising firmament since 2002. We deliver 360 integrated communications across Pan India newspaper print, television buying, experiential BTL activations, and full-funnel digital marketing.
+          </p>
+
+          <!-- Solid Action Buttons -->
+          <div class="pt-2 flex flex-wrap gap-4 items-center">
+            <a href="#works" class="px-8 py-4 rounded-full bg-agency-blue hover:bg-agency-blueHover text-white font-headline font-bold text-xs tracking-widest uppercase transition-colors shadow-lg">
+              View Case Studies
+            </a>
+            <a href="#contact" class="px-8 py-4 rounded-full bg-white border-2 border-agency-blue text-agency-blue hover:bg-agency-blue hover:text-white font-headline font-bold text-xs tracking-widest uppercase transition-colors">
+              Start A Campaign Brief
+            </a>
+          </div>
+
+          <!-- Truth and Impact Solid Block -->
+          <div class="pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm">
+            <div class="space-y-1">
+              <span class="font-headline font-bold text-agency-blue tracking-wider uppercase block">THE TRUTH</span>
+              <p class="text-slate-700 font-medium">It takes passion to create a spark of idea.</p>
+            </div>
+            <div class="space-y-1">
+              <span class="font-headline font-bold text-agency-blue tracking-wider uppercase block">THE IMPACT</span>
+              <p class="text-slate-600">25 Years of building lasting market leaders across India.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: 25-Year Milestone Presentation Card -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="w-full max-w-md bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-xl flex flex-col items-center text-center space-y-6">
+            
+            <img src="assets/branding/badge_25_years_transparent.png" alt="25 Years of Expertise Badge" class="w-48 h-48 sm:w-56 sm:h-56 object-contain" />
+            
+            <div class="space-y-2">
+              <span class="font-script text-3xl sm:text-4xl text-agency-blue block -rotate-3">Celebrating</span>
+              <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900 tracking-wide">SILVER JUBILEE</h3>
+              <p class="text-xs text-slate-600 leading-relaxed max-w-xs mx-auto">
+                Decades of commitment in brand building, media planning, and omnichannel marketing execution.
+              </p>
+            </div>
+
+            <div class="w-full pt-4 border-t border-slate-200 grid grid-cols-3 gap-2 text-center">
+              <div>
+                <span class="font-headline text-lg font-bold text-slate-900">2002</span>
+                <p class="text-[10px] font-headline text-slate-500 uppercase tracking-wider">Founded</p>
+              </div>
+              <div>
+                <span class="font-headline text-lg font-bold text-slate-900">25+</span>
+                <p class="text-[10px] font-headline text-slate-500 uppercase tracking-wider">Years</p>
+              </div>
+              <div>
+                <span class="font-headline text-lg font-bold text-slate-900">100%</span>
+                <p class="text-[10px] font-headline text-slate-500 uppercase tracking-wider">Guaranteed</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK / CASE STUDIES (LIGHT BACKGROUND) -->
+  <section id="works" class="py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200 pb-8">
+      <div>
+        <span class="font-headline text-xs font-bold text-agency-blue tracking-[0.25em] uppercase block mb-2">
+          Selected Portfolio
+        </span>
+        <h2 class="font-headline text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">
+          CASE STUDIES.
+        </h2>
+      </div>
+      <p class="text-slate-600 text-sm sm:text-base max-w-md">
+        Where market research, creative craft, and strategic media buying combine for marketplace dominance.
+      </p>
+    </div>
+
+    <!-- Case Study 01: Bhima Jewellers -->
+    <div class="case-card-light min-h-[520px] lg:min-h-[600px] flex items-stretch group">
+      <img src="assets/A.jpg" alt="Bhima Jewellers Campaign" class="case-card-img absolute inset-0" />
+      <div class="case-overlay-dark">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-headline tracking-widest uppercase text-white">
+            <span>Client: Bhima Jewellers • Retail and Luxury</span>
+          </div>
+          <h3 class="font-headline text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+            THE FESTIVE SPARKLE
+          </h3>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-5 border-t border-white/20 text-xs">
+            <div>
+              <span class="font-headline font-bold text-sky-300 tracking-wider uppercase block">THE TRUTH</span>
+              <p class="text-slate-200 mt-1">High value jewellery retail demands emotional prestige combined with unavoidable mass media presence.</p>
+            </div>
+            <div>
+              <span class="font-headline font-bold text-sky-300 tracking-wider uppercase block">WHAT WE SOLD</span>
+              <p class="text-slate-200 mt-1">Full page newspaper releases, television spots, outdoor hoardings, and point of sale collaterals.</p>
+            </div>
+            <div>
+              <span class="font-headline font-bold text-sky-300 tracking-wider uppercase block">THE IMPACT</span>
+              <p class="text-slate-200 mt-1">Record festive showroom footfalls and leading regional share of voice across South India.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two-Column Case Studies -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Case 02: Monier Roofing Systems -->
+      <div class="case-card-light min-h-[460px] flex items-stretch group">
+        <img src="assets/B.jpg" alt="Monier Roofing Systems" class="case-card-img absolute inset-0" />
+        <div class="case-overlay-dark">
+          <div class="space-y-3">
+            <span class="font-headline text-[10px] tracking-widest uppercase text-sky-300">
+              Client: Monier Roofing Systems • Architectural BTL
+            </span>
+            <h3 class="font-headline text-2xl sm:text-4xl font-black text-white">
+              ARCHITECTURAL HORIZONS
+            </h3>
+            <div class="pt-4 border-t border-white/15 text-xs text-slate-200 space-y-2">
+              <p><strong class="font-headline text-sky-300">WHAT WE SOLD:</strong> Experiential Trade Pavilion Design and BTL Exhibition Activation.</p>
+              <p><strong class="font-headline text-sky-300">THE IMPACT:</strong> Direct high intent engagement with over 1500 leading architects, structural engineers, and developers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 03: Higher Education -->
+      <div class="case-card-light min-h-[460px] flex items-stretch group">
+        <img src="assets/G.jpg" alt="University Admissions Campaign" class="case-card-img absolute inset-0" />
+        <div class="case-overlay-dark">
+          <div class="space-y-3">
+            <span class="font-headline text-[10px] tracking-widest uppercase text-sky-300">
+              Client: Garden City and Alliance Universities • Higher Education
+            </span>
+            <h3 class="font-headline text-2xl sm:text-4xl font-black text-white">
+              FUTURE LEADERS INITIATIVE
+            </h3>
+            <div class="pt-4 border-t border-white/15 text-xs text-slate-200 space-y-2">
+              <p><strong class="font-headline text-sky-300">WHAT WE SOLD:</strong> Pan India Admission Season Campaign across National Print and Performance Digital.</p>
+              <p><strong class="font-headline text-sky-300">THE IMPACT:</strong> Maximized qualified applicant intake and national ranking recognition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Case Study 04: Confident Group -->
+    <div class="case-card-light min-h-[480px] flex items-stretch group">
+      <img src="assets/D.jpg" alt="Confident Group Campaign" class="case-card-img absolute inset-0" />
+      <div class="case-overlay-dark">
+        <div class="max-w-3xl space-y-4">
+          <span class="font-headline text-[10px] tracking-widest uppercase text-sky-300">
+            Client: Confident Group • Real Estate and Infrastructure
+          </span>
+          <h3 class="font-headline text-3xl sm:text-5xl font-black text-white">
+            LIVING AT THE PINNACLE
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/15 text-xs">
+            <div>
+              <span class="font-headline font-bold text-sky-300 tracking-wider uppercase block">WHAT WE SOLD</span>
+              <p class="text-slate-200 mt-1">Multi city launch campaign: Front page newspaper spreads, highway hoardings, and targeted digital retargeting.</p>
+            </div>
+            <div>
+              <span class="font-headline font-bold text-sky-300 tracking-wider uppercase block">THE RESULT</span>
+              <p class="text-slate-200 mt-1">Sold out prime residential inventory within the launch quarter across Karnataka and Kerala.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- WHAT WE SELL: AGENCY CAPABILITIES (BRIGHT CRISP CARDS) -->
+  <section id="capabilities" class="py-28 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="font-headline text-xs font-bold text-agency-blue tracking-[0.25em] uppercase block mb-2">
+            Practice Areas
+          </span>
+          <h2 class="font-headline text-4xl sm:text-6xl font-black text-slate-900 tracking-tight">
+            WHAT WE SELL.
+          </h2>
+        </div>
+        <p class="text-slate-600 text-base max-w-md">
+          End to end commercial firepower. We take responsibility for your entire marketing funnel, from inception to conversion.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 01 -->
+        <div class="capability-card-light space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="font-headline text-2xl font-black text-agency-blue">01</span>
+            <h3 class="font-headline text-xl font-bold text-slate-900">MASS MEDIA ADVERTISING & MEDIA BUYING</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Our national and international media presence enables us to unlock prime advertising platforms at the most competitive media rates. Pan India Newspaper print campaigns, Television spots, Radio jingles, and high footfall Outdoor hoardings.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-headline text-agency-blue font-bold uppercase tracking-wider">
+            Print • TV • Radio • OOH
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="capability-card-light space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="font-headline text-2xl font-black text-agency-blue">02</span>
+            <h3 class="font-headline text-xl font-bold text-slate-900">BRAND GENESIS & CREATIVE IDENTITY</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              By defining, organizing, and positioning your brand correctly, we enable you to sustain market leadership. We craft logos, comprehensive corporate identity manuals, packaging, and compelling copy that connects emotionally with audiences.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-headline text-agency-blue font-bold uppercase tracking-wider">
+            Logos • Packaging • Copy
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="capability-card-light space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="font-headline text-2xl font-black text-agency-blue">03</span>
+            <h3 class="font-headline text-xl font-bold text-slate-900">EXPERIENTIAL & BTL ACTIVATIONS</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Our team curates immersive events and below the line (BTL) activations that put products directly in front of buyers. High profile corporate product launches, trade expo pavilions, experiential customer kiosks, and nationwide roadshows.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-headline text-agency-blue font-bold uppercase tracking-wider">
+            Product Launches • Expos • Stalls
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="capability-card-light space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="font-headline text-2xl font-black text-agency-blue">04</span>
+            <h3 class="font-headline text-xl font-bold text-slate-900">FULL-FUNNEL DIGITAL MARKETING</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              To grow digitally and sell more products, we engineer performance driven digital marketing. Targeted search engine marketing (Google Ads), paid social campaigns (Meta, LinkedIn, YouTube), search engine optimization, and high conversion landing funnels.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-headline text-agency-blue font-bold uppercase tracking-wider">
+            Performance Ads • SEO • Lead Gen
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="capability-card-light space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="font-headline text-2xl font-black text-agency-blue">05</span>
+            <h3 class="font-headline text-xl font-bold text-slate-900">360 INTEGRATED BRAND ROLLOUTS</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              A holistic mass media communication strategy where print, electronic, BTL, and digital media reinforce each other simultaneously. Unifying your story, identity, and market language across the entire country.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-headline text-agency-blue font-bold uppercase tracking-wider">
+            Omnichannel Sync • National PR
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="capability-card-light space-y-4 flex flex-col justify-between bg-agency-blue text-white border-agency-blue shadow-lg">
+          <div class="space-y-3">
+            <span class="font-headline text-2xl font-black text-white">06</span>
+            <h3 class="font-headline text-xl font-bold text-white">THE 25 YEAR COMMITMENT</h3>
+            <p class="text-white/90 text-sm leading-relaxed">
+              Direct senior partner leadership on every single account. We ensure uninterrupted campaign execution, meticulous media budget optimization, and verified commercial impact since 2002.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/20 text-xs font-headline text-white font-bold uppercase tracking-wider flex items-center justify-between">
+            <span>Guaranteed Execution</span>
+            <i data-lucide="award" class="w-4 h-4 text-white"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AGENCY TRUTH & HERITAGE (CLEAN LIGHT DESIGN) -->
+  <section id="about" class="py-28 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <div class="lg:col-span-7 space-y-8">
+          <span class="font-headline text-xs font-bold text-agency-blue tracking-[0.25em] uppercase block">
+            Agency Truth • Est. 2002
+          </span>
+
+          <h2 class="font-headline text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+            Commitment Guaranteed. <br />
+            <span class="text-slate-500 font-normal text-2xl sm:text-3xl">
+              25 Years in the Advertising Firmament.
+            </span>
+          </h2>
+
+          <div class="space-y-6 text-slate-600 text-lg leading-relaxed">
+            <p>
+              In the advertising firmament, <strong>AA Advertising & Communications Pvt. Ltd.</strong> has been reverberating since <strong>2002</strong>. Over 25 years, we have revitalized dozens of brands, added immense commercial value to hundreds of products, and elevated corporate institutions into market champions.
+            </p>
+            <p>
+              Perfection personifies our commitment, dedication, and experience in brand building. Product understanding, market research, consumer psychology, advertising strategies, and precise media planning form the bedrock of our process.
+            </p>
+          </div>
+
+          <div class="pt-6 grid grid-cols-3 gap-6 border-t border-slate-200">
+            <div>
+              <span class="font-headline text-4xl sm:text-5xl font-black text-agency-blue">2002</span>
+              <p class="text-xs text-slate-500 font-headline uppercase tracking-wider mt-1">Founded</p>
+            </div>
+            <div>
+              <span class="font-headline text-4xl sm:text-5xl font-black text-agency-blue">25+</span>
+              <p class="text-xs text-slate-500 font-headline uppercase tracking-wider mt-1">Years Mastery</p>
+            </div>
+            <div>
+              <span class="font-headline text-4xl sm:text-5xl font-black text-agency-blue">100%</span>
+              <p class="text-xs text-slate-500 font-headline uppercase tracking-wider mt-1">Commitment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative p-12 rounded-3xl bg-slate-50 border border-slate-200 shadow-xl flex flex-col items-center text-center max-w-sm">
+            <img src="assets/branding/badge_25_years_transparent.png" alt="25 Years Badge" class="w-56 h-56 sm:w-64 sm:h-64 object-contain" />
+            <div class="mt-6 space-y-1">
+              <span class="font-script text-4xl text-agency-blue block -rotate-3">Celebrating</span>
+              <h4 class="font-headline text-xl font-bold text-slate-900 tracking-wide">SILVER JUBILEE</h4>
+              <p class="text-xs text-slate-600 mt-2">
+                Proud partner to visionary enterprises across India.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLIENT ROSTER (LIGHT BACKGROUND WITH SHARP WHITE CARDS) -->
+  <section id="clients" class="py-28 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200 pb-8">
+        <div>
+          <span class="font-headline text-xs font-bold text-agency-blue tracking-[0.3em] uppercase block mb-3">
+            PARTNERSHIPS
+          </span>
+          <h2 class="font-headline text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 tracking-tight leading-none">
+            OUR CLIENTS
+          </h2>
+        </div>
+        <p class="text-sm font-headline tracking-widest text-slate-500 uppercase">
+          A LEGACY OF ENDURING TRUST
+        </p>
+      </div>
+    </div>
+
+    <!-- Continuous Logo Ticker -->
+    <div class="relative w-full overflow-hidden py-6 border-y border-slate-200 bg-white">
+      <div class="ticker-track flex items-center gap-8">
+        <!-- Logo Set 1 -->
+        <div class="flex items-center gap-8 shrink-0">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Bhima.png" alt="Bhima Jewellers" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/GCU.png" alt="Garden City University" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Alliance university logo.jpg" alt="Alliance University" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Confident group.jpg" alt="Confident Group" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Monier roofing logo.png" alt="Monier Roofing" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/DPDC.png" alt="DPDC" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/IAS.png" alt="IAS" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/AWARE.png" alt="AWARE" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Anu-Solar.jpg" alt="Anu Solar" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Brillent printers logo.jpg" alt="Brilliant Printers" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/IFINE Interiors logo.jpg" alt="IFINE Interiors" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/isdc-logo1.png" alt="ISDC" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+        </div>
+        <!-- Logo Set 2 -->
+        <div class="flex items-center gap-8 shrink-0" aria-hidden="true">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Bhima.png" alt="Bhima Jewellers" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/GCU.png" alt="Garden City University" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Alliance university logo.jpg" alt="Alliance University" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Confident group.jpg" alt="Confident Group" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Monier roofing logo.png" alt="Monier Roofing" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/DPDC.png" alt="DPDC" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/IAS.png" alt="IAS" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/AWARE.png" alt="AWARE" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Anu-Solar.jpg" alt="Anu Solar" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/Brillent printers logo.jpg" alt="Brilliant Printers" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/IFINE Interiors logo.jpg" alt="IFINE Interiors" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm px-8 py-5 h-28 sm:h-32 min-w-[220px] sm:min-w-[280px] flex items-center justify-center">
+            <img src="assets/isdc-logo1.png" alt="ISDC" class="max-h-16 sm:max-h-20 max-w-[200px] object-contain" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START A BRIEF / CONTACT (ROYAL BLUE POWER CONTRAST) -->
+  <section id="contact" class="py-28 bg-agency-navy text-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        
+        <!-- Left: Briefing Info -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <span class="font-headline text-xs sm:text-sm font-bold text-sky-400 tracking-[0.3em] uppercase block mb-3">
+              START A CONVERSATION
+            </span>
+            <h2 class="font-headline text-6xl sm:text-8xl lg:text-9xl font-black text-white tracking-tight leading-none">
+              LET'S TALK.
+            </h2>
+            <p class="text-slate-200 text-lg sm:text-xl mt-6 leading-relaxed font-normal">
+              Whether you are preparing a national print and TV rollout, revitalizing a heritage brand, or executing an experiential exhibition, our Bangalore team is ready.
+            </p>
+          </div>
+
+          <div class="space-y-6 pt-6 border-t border-white/15 text-base">
+            <div>
+              <span class="font-headline text-xs font-bold text-sky-400 tracking-wider uppercase block">Headquarters</span>
+              <p class="text-white mt-1.5 leading-relaxed text-base sm:text-lg">
+                #27, AA Towers, MSR Main Road,<br />
+                Mathikere, Bangalore 560 054, Karnataka, India
+              </p>
+            </div>
+
+            <div>
+              <span class="font-headline text-xs font-bold text-sky-400 tracking-wider uppercase block">Direct Line</span>
+              <p class="text-white mt-1.5 text-base sm:text-lg">
+                Mobile: <a href="tel:+919845388869" class="hover:underline font-bold">+91 98453 88869</a>
+              </p>
+              <p class="text-slate-300 text-sm mt-0.5">
+                Tel: 080 23378382 / 23478382 | Telefax: 080-23578382
+              </p>
+            </div>
+
+            <div>
+              <span class="font-headline text-xs font-bold text-sky-400 tracking-wider uppercase block">Electronic</span>
+              <p class="text-white mt-1.5 text-base sm:text-lg">
+                <a href="mailto:info@aaa.net.in" class="hover:underline font-bold">info@aaa.net.in</a>
+              </p>
+              <p class="text-slate-300 text-sm mt-0.5">www.aaa.net.in</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Clean Brief Form -->
+        <div class="lg:col-span-7">
+          <div class="p-8 sm:p-14 bg-agency-midnight border border-white/15 rounded-3xl shadow-2xl">
+            <h3 class="font-headline text-3xl sm:text-4xl font-black text-white mb-2">SUBMIT A CAMPAIGN BRIEF</h3>
+            <p class="text-slate-400 text-xs font-headline uppercase tracking-widest mb-10">WE RESPOND WITHIN 24 HOURS.</p>
+
+            <form id="contact-form" class="space-y-6">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block font-headline text-xs font-bold text-slate-300 uppercase tracking-widest mb-2">NAME *</label>
+                  <input type="text" id="name" required placeholder="Your full name" class="w-full px-5 py-4 rounded-xl bg-agency-navy border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-agency-blue transition text-base" />
+                </div>
+                <div>
+                  <label for="company" class="block font-headline text-xs font-bold text-slate-300 uppercase tracking-widest mb-2">COMPANY *</label>
+                  <input type="text" id="company" required placeholder="Company or organization" class="w-full px-5 py-4 rounded-xl bg-agency-navy border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-agency-blue transition text-base" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block font-headline text-xs font-bold text-slate-300 uppercase tracking-widest mb-2">EMAIL *</label>
+                  <input type="email" id="email" required placeholder="you@company.com" class="w-full px-5 py-4 rounded-xl bg-agency-navy border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-agency-blue transition text-base" />
+                </div>
+                <div>
+                  <label for="phone" class="block font-headline text-xs font-bold text-slate-300 uppercase tracking-widest mb-2">PHONE *</label>
+                  <input type="tel" id="phone" required placeholder="+91 98450 00000" class="w-full px-5 py-4 rounded-xl bg-agency-navy border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-agency-blue transition text-base" />
+                </div>
+              </div>
+
+              <div>
+                <label for="service-req" class="block font-headline text-xs font-bold text-slate-300 uppercase tracking-widest mb-2">PRACTICE AREA</label>
+                <select id="service-req" class="w-full px-5 py-4 rounded-xl bg-agency-navy border border-white/20 text-white focus:outline-none focus:border-agency-blue transition text-base">
+                  <option value="360 Integrated Mass Media Campaign">360 Integrated Mass Media Campaign</option>
+                  <option value="National Print & Television Advertising">National Print & Television Media Buying</option>
+                  <option value="Experiential & BTL Activations">Experiential & BTL Activations (Expos / Launches)</option>
+                  <option value="Brand Genesis & Creative Identity">Brand Genesis & Creative Identity</option>
+                  <option value="Full-Funnel Digital Marketing">Full-Funnel Digital Marketing</option>
+                  <option value="General Inquiries">General Agency Inquiries</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block font-headline text-xs font-bold text-slate-300 uppercase tracking-widest mb-2">BRIEF / OBJECTIVE *</label>
+                <textarea id="message" rows="4" required placeholder="Describe your brand challenge, campaign timeline, and media objectives..." class="w-full px-5 py-4 rounded-xl bg-agency-navy border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-agency-blue transition text-base"></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="w-full bg-agency-blue hover:bg-agency-blueHover text-white font-headline font-black py-5 rounded-xl tracking-widest uppercase transition-colors text-sm shadow-xl">
+                SUBMIT BRIEF
+              </button>
+
+              <div id="form-success" class="hidden p-4 rounded-xl bg-emerald-900/40 border border-emerald-400 text-emerald-200 text-sm">
+                Thank you. Your campaign brief has been received. Our leadership team will connect within 24 hours.
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MINIMALIST FOOTER -->
+  <footer class="py-12 bg-agency-midnight border-t border-white/10 text-xs font-sans text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/branding/aaac_logo_white.png" alt="AA Advertising" class="h-8 w-auto object-contain" />
+        <span class="text-slate-500">|</span>
+        <span class="font-headline tracking-widest uppercase text-slate-400 text-[10px]">25 Years of Brand Genesis (2002 to 2026)</span>
+      </div>
+
+      <p class="font-headline tracking-wider uppercase text-[10px] text-slate-500">
+        © 2026 AA ADVERTISING & COMMUNICATIONS PVT. LTD. ALL RIGHTS RESERVED.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
